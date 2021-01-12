@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link rel="icon"  href="{% static 'images/favicon.ico'%}">
+		<title>Portfolio</title>http://127.0.0.1:7000/#
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,400italic,600,700,900,200' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="{% static 'css/jquery.fullPage.css' %}">
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/photoswipe.css' %}">
+		<link rel="stylesheet" href="{% static 'css/default-skin/default-skin.css' %}">
+		<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	</head>
+
+	<body>
+		<main class="container">
+			<div class="mobile-menu-overlay transition">
+				<div class="mobile-menu">
+					<i class="fa fa-times fa-2x"></i>
+				</div>
+				<ul class="mobile-menu-content">
+					<li class="mobile-menu-item">
+						<a href="{% url 'home'%}" class="dropdown">home</a>
+						<ul class="mobile-submenu">
+			                <li><a href="{% url 'home'%}">Home</a></li>
+			            </ul>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="{% url 'blog'}" class="dropdown">blog</a>
+						<ul class="mobile-submenu">
+							<li><a href="#">full width</a></li>
+			            </ul>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="{% url 'gallery' %}" class="dropdown">gallery</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="about">about me</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="contact">contact</a>
+					</li>
+				</ul>
+			</div>
+
+			<header class="transition header fixed">
+				<div class="main-menu">
+					<div id="logo">
+						<a href="#">
+							<img src="{% static 'images/logo.png' %}" alt="alex-zane-logo">
+<!--							<img src="{% static 'images/home/home.jpg' %}" alt="image-category">-->
+						</a>
+					</div>
+
+					<nav id="menu" class="col-md-10 col-sm-10">+
+						<ul class="hidden-xs">
+							<li><a class="menu-active" href="{% url 'home'%}">Home</a>
+								<ul><li><a href="{%url 'home' %}">Home 1</a></li></ul></li>
+							<li><a href="{% url 'blog' %}">Blog</a>
+								<ul><li><a href="#">full width</a></li></ul></li>
+							<li><a href="{% url 'gallery' %}">Gallery</a></li>
+							<li><a href="{% url 'about' %}">About Me</a></li>
+							<li><a href="contact">Contact</a></li>
+						</ul>
+						<div class="mobile-menu col-xs-2 pull-right visible-xs">
+							<i class="fa fa-bars fa-2x"></i>
+						</div>
+					</nav>
+ 				</div>
+			</header>
+
+			{% block content %}  {% endblock %}
+
+			<footer id="footer" class="fixed white">
+				<p>© Your name 2016. All rights reserved.</p>
+			</footer>
+
+		</main>
+			<script type="text/javascript" src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/jquery.fullPage.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/imagesloaded.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/masonry.​min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/website-smooth-scroll.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/photoswipe.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/photoswipe-ui-default.min.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+	</body>
+</html>

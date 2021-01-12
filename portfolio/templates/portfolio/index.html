@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+			{% block content %}
+
+		<!-- Content -->
+			<section class="content fullpage transition">
+			{% for p in portfolio %}
+			<!-- Section One -->
+				<section class="section" id="section1-v2">
+					<div class="darker medium"></div>
+					<div class="border">
+						<div class="frames">
+		                    <div></div>
+		                    <div></div>
+		                    <div></div>
+		                    <div></div>
+	                	</div>
+						<div class="corners">
+							<img src="{% static 'images/home/home.jpg' %}" alt="image-category">
+
+
+		                </div>
+					</div>
+					<div class="cover-titles-2">
+						<div class="right-block col-md-8 col-sm-8 col-xs-12">
+							<img src="{{ p.img }}" alt="image-category">
+						</div>
+						<div class="left-block col-md-4 col-sm-4 col-xs-12 align-right">
+							<h1 class="title">{{ p.title }}</h1>
+							<p>{{ p.description }}</p>
+						</div>
+					</div>
+					<div class="enter-category col-md-12">
+						<a href="#" class="btn">
+							<span>Take a look</span>
+							<i class="fa fa-arrow-right"></i>
+						</a>
+					</div>
+				</section>
+			<!-- /Section One -->
+			{% endfor %}
+			</section>
+		<!-- /Content -->
+
+			{% endblock %}

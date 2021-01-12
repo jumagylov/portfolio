@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="container">
+	<header class="transition header">
+		<div class="parallax">
+			<div class="darker"></div>
+		</div>
+		<div class="main-menu">
+			<div id="logo">
+				<a href="index.html">
+					<img src="{% static 'images/logo.png' %}" alt="alex-zane-logo">
+				</a>
+			</div>
+		</div>
+		<div class="item-category">
+			<h1>blog</h1>
+			<p>There are many variations of passages of Lorem Ipsum available</p>
+			<div class="border">
+				<div></div>
+			</div>
+		</div>
+	</header>
+
+	<div class="content">
+		<div class="masonry row transition">
+			<div class="blog-item">
+				<a href="comment">
+					<div class="col-md6 col-sm-6 col-xs-12">
+						<img src="{% static 'images/blog/blog-post.jpg' %}" alt="Image description">
+					</div>
+				</a>
+				<div class="post-info col-md6 col-sm-6 col-xs-12">
+					<div class="date">31
+						<span><i class="fa fa-calendar fa-2x"></i>december, 2016</span>
+					</div>
+					<a href="blog-post.html">
+						<h3>Lorem Ipsum</h3>
+					</a>
+					<p><a href="https://hdrezka.sh/films/fantasy/169-mstiteli-2012.html"> Open film</a></p>
+
+					<div class="text-right col-xs-8 col-lg-8">
+						<a href="{% url 'comment' %}">read comments
+							<i class="fa fa-arrow-right"></i>
+						</a>
+					</div>
+				</div>
+					{% with comments.count as total_comments %}
+						<h7>{{ total_comments }} comment{{ total_comments|pluralize }}</h7>
+					  {% endwith %}
+					  {% for comment in comments %}
+						<div class="comment">
+						  <p class="info">
+							Comment {{ forloop.counter }} by {{ comment.name }}
+							{{ comment.created }}
+						  </p>
+						  {{ comment.body|linebreaks }}
+						</div>
+
+					  {% empty %}<p>There are no comments yet.</p>{% endfor %}
+
+					  {% if new_comment %}<h7>Your comment has been added.</h7>
+					  {% else %}<h7>Add a new comment</h7>
+
+						<form action="comment" method="post">
+						  {{ comment_form.as_p }}
+						  {% csrf_token %}
+						  <p><input type="submit" value="Add comment"></p>
+						</form>
+				{% endif %}
+			</div>
+		</div>
+
+		<ul class="pager">
+			<li><a class="btn" href="#"><i class="fa fa-angle-left"></i> Previous</a></li>
+			<li><a class="btn" href="#">Next <i class="fa fa-angle-right"></i></a></li>
+		</ul>
+		<a href="#" class="back-top btn">
+			<i class="fa fa-angle-up fa-2x"></i>
+		</a>
+		<footer id="footer"><p>© Your name 2016. All rights reserved.</p></footer>
+
+	</div>
+</main>
+{% endblock %}

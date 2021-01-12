@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	<!-- Container -->
+		<main class="container">
+
+		<!-- Mobile Menu -->
+			<div class="mobile-menu-overlay transition">
+				<div class="mobile-menu">
+					<i class="fa fa-times fa-2x"></i>
+				</div>
+				<ul class="mobile-menu-content">
+					<li class="mobile-menu-item">
+						<a href="#" class="dropdown">home</a>
+						<ul class="mobile-submenu">
+			                <li><a href="index-1.html">Home 1</a></li>
+			                <li><a href="index-2.html">Home 2</a></li>
+			            </ul>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="#" class="dropdown">blog</a>
+						<ul class="mobile-submenu">
+							<li><a href="blog.html">full width</a></li>
+							<li><a href="blog-timeline.html">timeline</a></li>
+			                <li><a href="blog-post.html">Single Post</a></li>
+			            </ul>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="#" class="dropdown">gallery</a>
+						<ul class="mobile-submenu">
+			                <li><a href="gallery.html">2 column</a></li>
+			                <li><a href="gallery-3col.html">3 column</a></li>
+			                <li><a href="gallery-4col.html">4 column</a></li>
+			            </ul>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="about.html">about me</a>
+					</li>
+					<li class="mobile-menu-item">
+						<a href="contact.html">contact</a>
+					</li>
+				</ul>
+			</div>
+		<!-- /Mobile Menu -->
+
+		<!-- Header -->
+			<header class="transition header">
+				<div class="parallax">
+					<div class="darker"></div>
+				</div>
+				<div class="main-menu">
+					<div id="logo">
+						<a href="index-1.html">
+							<img src="assets/images/logo.png" alt="alex-zane-logo">
+						</a>
+					</div>
+
+
+
+				</div>
+				<div class="item-category">
+					<h1>about</h1>
+					<p>There are many variations of passages of Lorem Ipsum available</p>
+					<div class="border">
+						<div></div>
+					</div>
+				</div>
+			</header>
+		<!-- /Header -->
+
+		<!--Content-->
+			<div class="content">
+
+			<!-- Row -->
+				<div class="row">
+					<div class="col-md6 col-sm-6 col-xs-12">
+						<img src="{% static 'images/about-me.jpg' %}" alt="Image description" />
+					</div>
+					<div class="col-md6 col-sm-6 col-xs-12">
+						<h3>Photography name</h3>
+						<p>«Это одновременно и страшно, и весело. Это что-то, чего никто никогда раньше не делал, и именно благодаря этому духу новизны все с энтузиазмом принимают такой подход. Другие режиссёры не привыкли привлекать уже ангажированных актеров из других фильмов, делать привязки к определённым сюжетным линиям или местам, но я думаю… все в итоге согласились на это и считают, что это весело. В основном потому, что мы неизменно продолжаем утверждать: фильм, над которым мы работаем в настоящий момент — превыше всего. Все наши „связки“ — всё это весело и также будет очень важным, если вы того захотите. Если поклонники захотят заглянуть дальше и увидеть более глубокую связь — она будет там. Есть и несколько очевидных „связок“, за которыми, мы надеемся, сможет следовать и основная аудитория. Но… причина, по которой все режиссёры согласились принимать участие в этой затее — в том, что их фильмы должны быть конкурентоспособными сами по себе. Им нужен свежий взгляд, уникальный тон, а тот факт, что они могут быть взаимосвязаны, если зритель желает идти по этим следам из хлебных крошек — бонус».
+						</p>
+					</div>
+
+				<!-- Social Icons -->
+					<div class="social-icons col-md12 col-sm-12 col-xs-12">
+						<h3>find me on:</h3>
+						<a href="#" class="btn facebook" style="color:" title="Facebook">
+							<i class="fa fa-facebook-official fa-2x"></i>
+						</a>
+						<a href="#" class="btn youtube" style="color:" title="Youtube">
+							<i class="fa fa-youtube fa-2x"></i>
+						</a>
+						<a href="#" class="btn px" style="color:" title="500px">
+							<i class="fa fa-500px fa-2x"></i>
+						</a>
+						<a href="#" class="btn flickr" style="color:" title="Flickr">
+							<i class="fa fa-flickr fa-2x"></i>
+						</a>
+						<a href="#" class="btn pinterest" style="color:" title="Pinterest">
+							<i class="fa fa-pinterest fa-2x"></i>
+						</a>
+						<a href="#" class="btn twitter" style="color:" title="Twitter">
+							<i class="fa fa-twitter fa-2x"></i>
+						</a>
+						<a href="#" class="btn instagram" style="color:" title="Instagram">
+							<i class="fa fa-instagram fa-2x"></i>
+						</a>
+						<a href="#" class="btn google" style="color:" title="Google Plus">
+							<i class="fa fa-google-plus-square fa-2x"></i>
+						</a>
+					</div>
+				<!-- /Social Icons -->
+
+				<!-- Clients -->
+					<div class="clients col-md-12 col-sm-12 col-xs-12">
+            <h3>clients:</h3>
+            <a href="#">
+              <img src="{% static 'images/company-logo.png' %}" alt="clients">
+            </a>
+            <a href="#">
+              <img src="{% static 'images/company-logo.png' %}" alt="clients">
+            </a>
+            <a href="#">
+              <img src="{% static 'images/company-logo.png' %}" alt="clients">
+            </a>
+            <a href="#">
+              <img src="{% static 'images/company-logo.png' %}" alt="clients">
+            </a>
+            <a href="#">
+              <img src="{% static 'images/company-logo.png' %}" alt="clients">
+            </a>
+            <a href="#">
+              <img src="{% static 'images/company-logo.png' %}" alt="clients">
+            </a>
+          </div>
+				<!-- /Clients -->
+
+				</div>
+			<!-- /Row -->
+{% endblock %}
